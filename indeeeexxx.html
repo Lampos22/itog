@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Преподаватель</title>
+    <script>
+    let u = {
+        surname: 'Михеева',
+        name: 'Татьяна',
+        patronymic: 'Александровна',
+        ocupation: 'Преподаватель специальных дисциплин',
+        degree: 'Высшее',
+        education: 'Московский государственный институт электронной техники (технический университет)',
+        qualification: 'Инженер-программист инфокоммуникационных систем',
+        specialty: 'Программное обеспечение радиоэлектронных систем',
+        discipline: ['Основы алгоритмизации и программирования', 'Компьютерная графика'],
+        category: 'Категория преподавателя:',
+        experience: 'Стаж работы:',
+        email: 'E-mail:',
+        site: 'Персональный сайт:'
+    }
+    </script>
+</head>
+<body>
+    <style>
+    body, html{
+        margin: 0;
+        background-image: linear-gradient(90deg, #a3d0f0, rgb(116, 195, 244), #ace5ee);
+    }
+    header{
+        background-image: linear-gradient(45deg, rgb(76, 118, 144), #4a8ebf);
+        height: 100px;
+        width: 100%;
+    }
+    ol{
+        display: flex;
+        list-style: none;
+        color: rgb(191, 244, 255);
+        margin-top: 0  ;
+        margin-left: 32%;
+        font-size: 20px;
+    }
+    li{
+        margin-top: 3%;
+        margin-right: 6%;
+    }
+    img{
+        height: 25%;
+        width: 25%;
+        margin-top: 3%;
+        margin-left: 15%;
+    }
+    a{
+        text-decoration: none;
+        color:white;
+    }
+    a:hover{
+        background-image: linear-gradient(90deg, #3a8ebb, #248ce1);
+    }
+    .info {
+        margin-left: 50px;
+    }
+    .info h1 {
+        font-size: 50px;
+    }
+    hr {
+        border: 1px solid #000000b0;
+    }
+    .info li {
+        margin: 10px;
+    }
+    .middle{
+        display: flex;
+    }
+    </style>
+    <header>
+        <ol>
+            <li><a href="">О проекте</a></li>
+            <li><a href="">Курсы</a></li>
+            <li><a href="">Преподаватели</a></li>
+            <li><a href="">Контакты</a></li>
+        </ol>
+    </header>
+    <div class="middle">
+        <img src="no-image.jpg">
+        <section class="info">
+        <script>
+        let y = `
+        <h1> ${u.surname} <br> ${u.name} ${u.patronymic} </h1>
+        <p><h2> ${u.ocupation} </h2></p>
+        <hr>
+        <p><h3>Основная информация:</h3>
+        <ul>
+            <li><b>Уровень образования: ${u.degree}</b></li>
+            <li><b>Образование: ${u.education}</b></li>
+            <li><b>Квалификация: ${u.qualification}</b></li>
+            <li><b>Специализация: ${u.specialty}</b></li>
+            <li><b>Преподаваемые дисциплины:</b></li>
+        <ul>
+            <li><b>${u.discipline[0]}</b></li>
+            <li><b>${u.discipline[1]}</b></li>
+        </ul>
+        </ul>
+        </p>
+        <p><h3>Дополнительная информация:</h3>
+        <ul>
+            <li><b>Категория: ${u.category}</b></li>
+            <li><b>Стаж: ${u.experience}</b></li>
+            <li><b>E-mail: ${u.email}</b></li>
+            <li><b>Персональный сайт: ${u.site}</b></li>
+        </ul>
+        </p>`;
+        document.write(y);
+        </script>
+        </section>
+    </div>
+</body>
+</html>
